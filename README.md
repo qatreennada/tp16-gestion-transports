@@ -55,3 +55,7 @@ Import réalisé directement en SQL (PostgreSQL) avec `xpath()` : le fichier XML
 
 ## PARTIE 3 – XSLT
 Le fichier `xml/horaires.xslt` transforme `xml/horaires.xml` en une page HTML contenant un tableau (Ligne | Station | Heure), avec tri sur `timestamp` (bonus).
+
+
+## PARTIE 4 – Requêtes (SQL + MongoDB)
+Les requêtes SQL sont dans `sql/queries.sql` et les requêtes MongoDB dans `mongo/queries.js` (horaires d’une ligne, plage horaire 7h–9h, et aggregation du nombre de passages par ligne).
