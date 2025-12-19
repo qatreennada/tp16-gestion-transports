@@ -1,0 +1,1 @@
+db.lignes.createIndex({ "horaires.timestamp": 1 });
