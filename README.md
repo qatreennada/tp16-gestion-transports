@@ -59,3 +59,23 @@ Le fichier `xml/horaires.xslt` transforme `xml/horaires.xml` en une page HTML co
 
 ## PARTIE 4 – Requêtes (SQL + MongoDB)
 Les requêtes SQL sont dans `sql/queries.sql` et les requêtes MongoDB dans `mongo/queries.js` (horaires d’une ligne, plage horaire 7h–9h, et aggregation du nombre de passages par ligne).
+
+
+## PARTIE 5 – Optimisation
+
+### Optimisation SQL
+Les requêtes SQL ont été analysées avec `EXPLAIN ANALYZE` pour voir comment la base exécute les requêtes.  
+Sans index, certaines requêtes parcourent toute la table, ce qui prend plus de temps.
+
+Pour améliorer ça, des index ont été ajoutés, surtout sur les clés utilisées dans les jointures et sur les champs liés au temps (station_id, timestamp).
+
+Les détails sont dans le fichier `explain/sql_explain.md`.
+
+---
+
+### Optimisation MongoDB
+Les requêtes MongoDB ont été testées avec `explain("executionStats")`.  
+Sans index, MongoDB fait un `COLLSCAN`, donc il lit toute la collection.
+
+Un index a été ajouté sur `horaires.timestamp` pour rendre les recherches par heure plus rapides.  
+Les détails sont dans `explain/mongo_explain.md`.
