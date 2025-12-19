@@ -49,3 +49,6 @@ Les champs importés sont : id, nom, commune, latitude et longitude.
 
 ### Import JSON (lignes.json)
 Les données du fichier `lignes.json` ont été importées dans la base SQL à l’aide de requêtes `INSERT INTO`.
+
+### Import XML (horaires.xml)
+Import réalisé directement en SQL (PostgreSQL) avec `xpath()` : le fichier XML est chargé puis chaque noeud `<horaire>` est transformé en lignes dans la table `horaire`.
