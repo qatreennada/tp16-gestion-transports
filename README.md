@@ -52,3 +52,6 @@ Les données du fichier `lignes.json` ont été importées dans la base SQL à l
 
 ### Import XML (horaires.xml)
 Import réalisé directement en SQL (PostgreSQL) avec `xpath()` : le fichier XML est chargé puis chaque noeud `<horaire>` est transformé en lignes dans la table `horaire`.
+
+## PARTIE 3 – XSLT
+Le fichier `xml/horaires.xslt` transforme `xml/horaires.xml` en une page HTML contenant un tableau (Ligne | Station | Heure), avec tri sur `timestamp` (bonus).
