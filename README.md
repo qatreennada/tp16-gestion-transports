@@ -47,6 +47,5 @@ Les stations sont importées dans la base SQL à partir du fichier `stations.csv
 
 Les champs importés sont : id, nom, commune, latitude et longitude.
 
----
-
-*(Les parties suivantes : import JSON, import XML, XSLT, requêtes et optimisation seront détaillées dans la suite du projet.)*
+### Import JSON (lignes.json)
+Les données du fichier `lignes.json` ont été importées dans la base SQL à l’aide de requêtes `INSERT INTO`.
